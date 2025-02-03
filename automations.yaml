@@ -1,0 +1,37 @@
+- id: '1738418362951'
+  alias: 小爱欢迎指令
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.ren_lian_shi_bie_2
+    attribute: 识别结果
+    to: '123'
+    from: 否
+  conditions: []
+  actions:
+  - device_id: bf25cec3b526abd7ab0206df4a9fbdaa
+    domain: text
+    entity_id: fe40816705c583aa497d3ddd1156883e
+    type: set_value
+    value: 欢迎回家，主人
+  mode: single
+- id: '1738419280335'
+  alias: 拍摄人脸
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.ren_lian_shi_bie
+    attribute: 识别状态
+    from: 否
+    to: 是
+  conditions: []
+  actions:
+  - action: camera.snapshot
+    metadata: {}
+    data:
+      filename: /vol1/@appshare/home-assistantan/config
+    target:
+      device_id: 160483e7ffb9b844bf5f2fc0b03f1c2e
+  mode: single
