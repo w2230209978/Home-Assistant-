@@ -18,13 +18,13 @@
 ### 方式1：HACS安装（推荐）
 1. 打开HACS面板
 2. 选择「自定义仓库」
-3. 添加仓库：`https://github.com/w2230209978/Home-Assistant-.git`
+3. 添加仓库：`https://github.com/w2230209978/ha-baidu-face.git`
 4. 搜索「Home-Assistant-」安装
 
 ### 方式2：手动安装
 
 cd /config/custom_components
-git clone https://github.com/w2230209978/Home-Assistant-.git
+git clone https://github.com/w2230209978/ha-baidu-face.git
 
 ## ⚙️ 配置指南
 
