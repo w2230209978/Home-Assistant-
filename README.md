@@ -59,19 +59,18 @@ sensor:
 
 ### Lovelace配置示例
 ```yaml
-type: vertical-stack
-cards:
-  - type: picture-glance
-    camera_image: camera.living_room
-    entities:
-      - entity: sensor.baidu_facerecognition
-        icon: mdi:face-recognition
-      - entity: sensor.baidu_age
-        icon: mdi:numeric
-  - type: history-graph
-    entities:
-      - sensor.baidu_age
-      - sensor.baidu_beauty
+type: picture-glance
+title: 实时人脸识别
+entities:
+  - entity: sensor.ren_lian_shi_bie_2
+    icon: mdi:face-recognition
+  - entity: sensor.nian_ling_2
+    icon: mdi:numeric
+  - entity: sensor.xing_bie_2
+    icon: mdi:gender-male-female
+  - switch.hikvision_ds_2cd1211d_i3_ir_lamp
+camera_image: 自己的摄像头id
+camera_view: live
 ```
 
 ## 🛠️ 常见问题
